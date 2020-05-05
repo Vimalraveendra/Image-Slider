@@ -40,7 +40,7 @@ class App extends React.Component {
         <Slider {...settings}>
           {this.state.images.map(image => {
             return (
-              <div key={image.id}>
+              <div className={styles.container} key={image.id}>
                 <img
                   className={styles.images}
                   src={image.userImageURL}

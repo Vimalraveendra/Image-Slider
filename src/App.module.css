@@ -1,13 +1,28 @@
 .App {
+  width: 80%;
   text-align: center;
-
+  margin-left: 80px;
   padding: 24px;
 }
-
+.container {
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .images {
-  width: 70%;
+  width: 40%;
   margin: 20px;
   padding: 20px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 40px !important;
+  line-height: 1;
+  opacity: 1 !important;
 }
 
 /* .slides {
