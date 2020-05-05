@@ -4,18 +4,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
+// import SampleNextArrow from "./Components/SampleNextArrow/SampleNextArrow";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 let settings = {
   dots: true,
   infinite: true,
-  slidesToShow: 3,
+  slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
-  speed: 2000,
-  autoplaySpeed: 1000,
-  cssEase: "linear"
+  arrows: true,
+  speed: 500
 };
 class App extends React.Component {
   state = {
@@ -33,10 +32,8 @@ class App extends React.Component {
       console.log("error", error);
     }
   }
-
   render() {
-    console.log("hits", this.state.images);
-
+    console.log("images", this.state.images);
     return (
       <div className={styles.App}>
         <h3>Image Slider</h3>
@@ -44,7 +41,11 @@ class App extends React.Component {
           {this.state.images.map(image => {
             return (
               <div key={image.id}>
-                <img src={image.previewURL} alt="cars-view"></img>
+                <img
+                  className={styles.images}
+                  src={image.userImageURL}
+                  alt="user-view"
+                ></img>
               </div>
             );
           })}
