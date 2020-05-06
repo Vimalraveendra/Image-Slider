@@ -13,7 +13,10 @@ let settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: true,
-  speed: 500
+  autoplay: true,
+  speed: 2000,
+  autoplaySpeed: 2000,
+  cssEase: "linear"
 };
 class App extends React.Component {
   state = {
@@ -32,13 +35,12 @@ class App extends React.Component {
     }
   }
   render() {
-    console.log("images", this.state.images);
     return (
       <div className={styles.App}>
-        <h3>Image Slider</h3>
+        <h1 className={styles.heading}>Image Slider</h1>
         <Slider {...settings}>
           {this.state.images.map(image => {
-            return (
+            return image.userImageURL.length ? (
               <div className={styles.container} key={image.id}>
                 <img
                   className={styles.images}
@@ -46,7 +48,7 @@ class App extends React.Component {
                   alt="user-view"
                 ></img>
               </div>
-            );
+            ) : null;
           })}
         </Slider>
       </div>
