@@ -4,7 +4,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
-// import SampleNextArrow from "./Components/SampleNextArrow/SampleNextArrow";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
