@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://vimalraveendra.github.io/Image-Slider",
   "dependencies": {
+<<<<<<< HEAD
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.3",
@@ -11,6 +12,15 @@
     "elliptic": "^6.5.4",
     "gh-pages": "^3.1.0",
     "lodash": "^4.17.21",
+=======
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.21.1",
+    "elliptic": "^6.5.3",
+    "gh-pages": "^2.2.0",
+    "lodash": "^4.17.19",
+>>>>>>> 795afa676d01c07bf2fa79241c7545bb16a50231
     "node-forge": "^0.10.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
